@@ -20,7 +20,7 @@
 
 {
     'name': 'Sale Order Show Payments',
-    'version': '1.0.0',
+    'version': '1.1.0',
     'author': 'Humanytek',
     'website': 'http://humanytek.com',
     'depends': [

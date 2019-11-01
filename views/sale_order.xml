@@ -6,7 +6,7 @@
         <field name="inherit_id" ref="sale.view_order_tree" />
         <field name="arch" type="xml">
             <field name="amount_total" position="after">
-                <field name="amount_paid" widget="monetary" sum="Total Paid"/>
+                <field name="amount_paid" widget="monetary" sum="Total Invoiced"/>
                 <field name="amount_due" widget="monetary" sum="Total Due"/>
             </field>
         </field>

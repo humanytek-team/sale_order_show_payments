@@ -8,6 +8,7 @@ class SaleOrder(models.Model):
 
     amount_paid = fields.Float(
         compute='_get_amount_paid',
+        string=_('Invoiced'),
     )
     amount_due = fields.Float(
         compute='_get_amount_due',
@@ -16,7 +17,7 @@ class SaleOrder(models.Model):
     @api.depends('invoice_ids')
     def _get_amount_paid(self):
         for record in self:
-            record.amount_paid = sum(invoice.amount_total for invoice in record.invoice_ids)  # TODO
+            record.amount_paid = sum(invoice.amount_total for invoice in record.invoice_ids if invoice.state != 'cancel')  # TODO
 
     @api.depends('amount_paid', 'amount_total')
     def _get_amount_due(self):
