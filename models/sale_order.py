@@ -8,10 +8,12 @@ class SaleOrder(models.Model):
 
     amount_paid = fields.Float(
         compute='_get_amount_paid',
+        store=True,
         string=_('Invoiced'),
     )
     amount_due = fields.Float(
         compute='_get_amount_due',
+        store=True,
     )
 
     @api.depends('invoice_ids')
