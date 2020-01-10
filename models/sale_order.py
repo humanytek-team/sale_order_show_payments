@@ -24,4 +24,4 @@ class SaleOrder(models.Model):
     @api.depends('amount_paid', 'amount_total')
     def _get_amount_due(self):
         for record in self:
-            record.amount_due = record.amount_total - record.amount_paid
+            record.amount_due = max(0, record.amount_total - record.amount_paid)
