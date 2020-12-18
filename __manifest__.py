@@ -19,15 +19,15 @@
 ##############################################################################
 
 {
-    'name': 'Sale Order Show Payments',
-    'version': '1.3.0',
-    'author': 'Humanytek',
-    'website': 'http://humanytek.com',
-    'depends': [
-        'account',
-        'sale',
+    "name": "Sale Order Show Payments",
+    "version": "1.3.0",
+    "author": "Humanytek",
+    "website": "http://humanytek.com",
+    "depends": [
+        "account",
+        "sale",
     ],
-    'data': [
-        'views/sale_order.xml',
+    "data": [
+        "views/sale_order.xml",
     ],
 }
