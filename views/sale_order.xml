@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <record id="view_order_due_tree" model="ir.ui.view">
+    <!--record id="view_order_due_tree" model="ir.ui.view">
         <field name="name">sale.order.due.tree</field>
         <field name="model">sale.order</field>
         <field name="inherit_id" ref="sale.view_order_tree"/>
@@ -22,5 +22,5 @@
                 <field name="amount_due" widget="monetary" options="{'currency_field': 'currency_id'}"/>
             </xpath>
         </field>
-    </record>
+    </record-->
 </odoo>
