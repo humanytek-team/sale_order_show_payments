@@ -20,7 +20,9 @@ class SaleOrder(models.Model):
     def _get_amount_paid(self):
         for record in self:
             record.amount_paid = sum(
-                invoice.amount_total for invoice in record.invoice_ids if invoice.state != "cancel"
+                invoice.amount_total
+                for invoice in record.invoice_ids
+                if invoice.state != "cancel"
             )  # TODO
 
     @api.depends("amount_paid", "amount_total")
