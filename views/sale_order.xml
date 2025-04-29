@@ -17,7 +17,7 @@
     <field name="model">sale.order</field>
     <field name="inherit_id" ref="sale.view_order_form"/>
     <field name="arch" type="xml">
-      <field name="tax_totals_json" position="after">
+      <field name="tax_totals" position="after">
         <field name="amount_paid" widget="monetary" options="{'currency_field': 'currency_id'}"/>
         <field name="amount_due" widget="monetary" options="{'currency_field': 'currency_id'}"/>
       </field>
